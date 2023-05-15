@@ -26,8 +26,8 @@ jobs:
         dotnet-version:  ${{ matrix.dotnet-version }}       
     
     - name: Change to project directory
-      run: cd D/College/OneDrive\ -\ Atlantic\ TU/College/Course\ Works/DevOps/CA2/DevOpsPipelinesCA2/EMS
-    
+      run: cd "D/College/OneDrive - Atlantic TU/College/Course Works/DevOps/CA2/DevOpsPipelinesCA2/EMS/"
+
     - name: Restore project dependencies
       # restores the project depedencies and tools
       working-directory: EMS # Changing the working dir to EMS before anything else happens
