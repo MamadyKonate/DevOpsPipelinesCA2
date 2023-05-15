@@ -26,7 +26,7 @@ jobs:
     
     # Changing the working dir to EMS
     - name: Change to correct dir
-      run: cd working-directory EMS
+      run: cd EMS
       
     - name: Restore project dependencies
       # restores the project depedencies and tools
