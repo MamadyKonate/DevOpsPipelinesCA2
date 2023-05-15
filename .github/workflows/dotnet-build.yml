@@ -23,15 +23,14 @@ jobs:
     - name: Setup .NET version ${{ matrix.dotnet-version }}
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version:  ${{ matrix.dotnet-version }}    
-    
-    # Changing the working dir to EMS before anything else happens
-    - name: Change to correct dir
-      working-directory: EMS
+        dotnet-version:  ${{ matrix.dotnet-version }}       
       
     - name: Restore project dependencies
       # restores the project depedencies and tools
-      run: dotnet restore
+      working-directory: EMS # Changing the working dir to EMS before anything else happens
+      run: |
+       run: dotnet restore
+       
     - name: Build
       run: dotnet build --no-restore
     - name: Test
